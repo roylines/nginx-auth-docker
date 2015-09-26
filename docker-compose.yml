@@ -1,0 +1,16 @@
+gwy:
+  build: ./gwy
+  ports:
+    - "80:8080"
+  links:
+    - ms1
+    - auth
+
+auth:
+  build: ./auth
+  expose:
+    - "8080"
+ms1:
+  build: ./ms1
+  expose:
+    - "8080"
